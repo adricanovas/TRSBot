@@ -1,6 +1,6 @@
 # TRS ChatBot (therealshow)
 
-## Información
+## Proyecto
 
 El proyecto consiste en un chatbot programado en _python 3_ y accesible mediante la aplicación _Telgram_ en la que se pueden consultar y almacenar los datos relativos a un equipo de futbol amateur.
 
@@ -10,7 +10,13 @@ La aplicación cuenta con un
 
 | Comando | Descripción | Activo |
 |---:|---|---|
-| DV | Dirección del Viento, medido a 2 m | Grados (º) | 
+| alta | Dirección del Viento, medido a 2 m | ✔️ | 
+| stats | Dirección del Viento, medido a 2 m | ✔️ |
+| partidos | Dirección del Viento, medido a 2 m | ✔️ |
+| mypartidos | Dirección del Viento, medido a 2 m | ✔️ |
+| mygraph | Dirección del Viento, medido a 2 m | ✔️ |
+| subirstats | Dirección del Viento, medido a 2 m | ✖️ |
+
 
 ## Ejecución
 
