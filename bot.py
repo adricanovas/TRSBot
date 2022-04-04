@@ -617,10 +617,6 @@ if __name__ == '__main__':
     dispatcher.add_handler(CommandHandler('partidos', partidos))
     dispatcher.add_handler(CommandHandler('mypartidos', mypartidos))
     dispatcher.add_handler(CommandHandler('mygraph', graph, pass_args=True))
-    #dispatcher.add_handler(CommandHandler('season', season, pass_args=True))
-    #dispatcher.add_handler(CommandHandler('convocar', convocar, pass_args=True))
-    #dispatcher.add_handler(CommandHandler('apuntarse', apuntarse, pass_args=True))
-    #dispatcher.add_handler(CommandHandler('equipos', equipos))
     #dispatcher.add_handler(CommandHandler('subirstats', subirStats, pass_args=True))
 
     run(updater)
