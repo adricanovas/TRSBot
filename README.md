@@ -1,58 +1,66 @@
 # TRS ChatBot (therealshow)
 
-## Proyecto
+## Project
 
-El proyecto consiste en un chatbot programado en _python 3_ y accesible mediante la aplicación _Telegram_ en la que se pueden consultar y almacenar los datos relativos a un equipo de futbol amateur. La aplicación permite tanto mostrar tus estadísitcas de cada temporada como compararlas con otros jugadores.
+The project consists of a chatbot programmed in _python 3_ and accessible through the _Telegram_ application, in which you can consult and store data related to an amateur football team. The application allows you to display your statistics for each season as well as compare them with other players.
 
-## Diseño
+## Design
 
-La aplicación dispone de tres elementos: El chatbot o interprete de comandos en Telegram, el servidor de despliegue y el servidor que almacena la base de datos.
+The application has three elements: The chatbot or command interpreter in Telegram, the deployment server, and the server that stores the database.
 
-### Comandos
+### Commands
 
-| Comando | Descripción | Activo |
+| Command | Description | Active |
 |---:|---|---|
-| alta | Comando para darse de alta en el sistema. Crea tu perfil e inicializa las stats | ✔️ | 
-| stats | Muestra un resumen de las estadisticas de cada jugador y su foto de perfil | ✔️ |
-| partidos | Muestra una lista con todos los partidos | ✔️ |
-| mypartidos | Crea | ✔️ |
-| mygraph | Genera una gráfica de los resultados de los partidos | ✔️ |
-| subirstats | Sube las estadisticas en texto de un partido | ❌ |
+| alta | Command to register in the system. Create your profile and initialize the stats | ✔️ | 
+| stats | Shows a summary of the statistics of each player and their profile picture | ✔️ |
+| partidos | Shows a list with all the matches | ✔️ |
+| mypartidos | Create | ✔️ |
+| mygraph | Generates a graph of the results of the matches | ✔️ |
+| subirstats | Upload the statistics in text of a match | ❌ |
 
-### Instalación
+### Installation
 
-El servidor de persistencia está operativo de forma ininterrumpida. La configuración se realiza mediante la instalación del archivo de requisitos _requierements.txt_. Se instalan las librerias necesarias para la ejecución del programa.
+The persistence server is continuously operational. Configuration is done by installing the _requirements.txt_ file. The necessary libraries for program execution are installed.
 
-> **Requisitos**: python-telegram-bot, matplotlib
+> **Requirements**: python-telegram-bot, matplotlib
 
-### Base de datos
+### Database
 
-La base de datos y las imágenes de los perfiles de los jugadores se almacenan en un servidor accesible mediante FTP. La base de datos está programada en SQlite y está dividida en temporadas. Cada temporada recibe los siguientes datos:
+The database and player profile images are stored on a server accessible via FTP. The database is programmed in SQlite and is divided into seasons. Each season receives the following data:
 
-> **Datos de jugador**: nombre, número de goles, número de asistencias, partidos ganados, partidos en empate, partidos jugados, ficha
+> **Player data**: name, number of goals, number of assists, matches won, matches tied, matches played, file
 
-> **Datos de partido**: temática, resultado, jugadores, equipación, campo, fecha
+> **Match data**: theme, result, players, equipment, field, date
 
-## Ejecución
+## Execution
 
-Existen dos modos de ejecución:
+There are two modes of execution:
 
-* Ejecución Local (Desarrollo)
-  * Permite la ejecución en una maquina local para pruebas y actualizaciones. Utiliza la variable _MODE == "dev"_ y los cambios no se aplican hasta realizar un commit.
-* Ejecución Remota (Release)
-  * Ejecución del código mediante un _deploy_ implementado en _Heroku_, concretamente es un _listener_ que escucha peticiones _HTTP_. El modo debe estar en _MODE == "prod"_.
+* Local Execution (Development)
+  * Allows execution on a local machine for testing and updates. Uses the variable _MODE == "dev"_ and changes are not applied until a commit is made.
+* Remote Execution (Release)
+  * Code execution through a _deploy_ implemented in _Heroku_, specifically a _listener_ that listens for _HTTP_ requests. The mode must be in _MODE == "prod"_.
 
-## Despligue
+## Deployment
 
-El despliegue se realiza a través de _Heroku_, una plataforma gratuita de hospedage web y programas. Se hace uso de una máquina con las siguientes características:
+Deployment is done through _Heroku_, a free web hosting and program platform. A machine with the following characteristics is used:
 ```shell
 System: Linux
 RAM: 512MB
 HD: 500 MiB
 ```
 
-## Fuentes de Información
+## Information Sources
 
 [Python Telegram Bot](https://python-telegram-bot.readthedocs.io/en/stable/)
 
-[Lógica de recepción de peticiones](https://github.com/python-telegram-bot/python-telegram-bot/wiki/Webhooks#heroku)
+[Request reception logic](https://github.com/python-telegram-bot/python-telegram-bot/wiki/Webhooks#heroku)
+
+Citations:
+[1] https://pypi.org/project/md-translate/
+[2] https://www.stepes.com/markdown-translation/
+[3] https://help.smartling.com/hc/en-us/articles/360012489774-Markdown
+[4] https://stackoverflow.com/questions/30585841/is-there-a-method-for-translating-markdown-formatted-text
+[5] https://www.markdownguide.org/tools/simpleen/
+[6] https://products.groupdocs.app/translation/markdown
